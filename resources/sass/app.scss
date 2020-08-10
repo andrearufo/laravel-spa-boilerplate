@@ -1,0 +1,60 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+#app-loading{
+    
+}
+
+pre{
+    padding: $spacer;
+    background: white;
+    margin: $spacer 0;
+}
+
+#layout{
+    $gutter: $grid-gutter-width / 2;
+
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    padding: $gutter;
+    gap: $gutter;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main"
+        "sidebar footer";
+
+    #layout-sidebar{
+        grid-area: sidebar;
+    }
+
+    #layout-header{
+        grid-area: header;
+    }
+
+    #layout-main{
+        grid-area: main;
+    }
+
+    #layout-footer{
+        grid-area: footer;
+    }
+
+    #layout-sidebar,
+    #layout-header,
+    #layout-main,
+    #layout-footer{
+        background: $white;
+        border-radius: $border-radius;
+        padding: $gutter;
+    }
+}
